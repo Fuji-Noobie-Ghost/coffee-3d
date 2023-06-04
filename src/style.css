@@ -1,0 +1,152 @@
+:root {
+    --dark-bg: #303030;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+header img { width: 100px; }
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+.menu:hover { opacity: 0.5; }
+.burger {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    display: flex;
+}
+.burger::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin-top: -10px;
+}
+.burger::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col h1 {
+    font-size: 120px;
+    line-height: 90%;
+}
+.col p { margin: 20px 0px; }
+
+.round-nav div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    border: solid 2px white;
+    padding: 4px;
+    margin: 30px 0px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.round-nav div:hover { background-color: white; }
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-container button {
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    padding: 15px 0px;
+    width: 175px;
+    border-radius: 50px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.btn-container button:hover {
+    color: var(--dark-bg);
+    background-color: white;
+}
+
+.bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    margin: 0px 15px;
+    transition: all 300ms;
+}
+a:hover {
+    opacity: 0.5
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play {
+    background-color: transparent;
+    border: solid 1px white;
+    outline: none;
+    border-radius: 50%;
+    padding: 20px 25px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 300ms;
+    fill: white;
+}
+.play:hover { background-color: white; fill: var(--dark-bg); }
+
+.arrow svg {
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+.arrow svg:hover { opacity: 0.5; }
